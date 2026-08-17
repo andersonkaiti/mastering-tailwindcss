@@ -12,6 +12,7 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --anderson-red: #f00;
   }
 }
 @layer base {
@@ -163,6 +164,9 @@
   }
 }
 @layer utilities {
+  .bg-\(--anderson-red\) {
+    background-color: var(--anderson-red);
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
