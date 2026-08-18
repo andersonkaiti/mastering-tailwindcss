@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+/*
+  Por padrão, o "dark:" segue o tema do sistema (prefers-color-scheme).
+  O @custom-variant sobrescreve isso: o "dark:" passa a ser acionado pela
+  classe ".dark" no HTML, permitindo controle manual do dark mode.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
