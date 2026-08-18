@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mastering TailwindCSS</title>
-    <!--
-      O TailwindCSS gera os preflights styles, que são "resets", então mesmo
-      que à primeira vista não tenha nenhum estilo no HTML, a identidade visual
-      gerada já é diferente da padrão.
-      
-      Segunda a documentação do TailwindCSS:
-      - "An opinionated set of base styles for Tailwind projects."
-    -->
     <link rel="stylesheet" href="styles/index.css">
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1 class="text-emerald-500 bg-(--anderson-red) text-3xl">
+    <!--
+      É possível criar classes dinâmicas utilizando colchetes.
+
+      Além disso, as classes suportam operadores do CSS como o calc().
+      
+      Importante: o delimitador de classes dentro do HTML, ou seja, o que
+      determina se uma classe terminou e está começando outra, é o espaço. Por
+      isso mt-[calc(20px + 20px) está errado e mt-[calc(20px_+_20px) está correto.
+    -->
+    <h1
+      class="text-emerald-500 text-3xl bg-[blueviolet] pb-[13.2px] mt-[calc(20px_+_20px)] shadow-[2px_2px_2px_1px_rgba(0,0,0,1)]"
+    >
       Hello, TailwindCSS!
     </h1>
   </body>

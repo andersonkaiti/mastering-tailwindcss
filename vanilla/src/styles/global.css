@@ -5,7 +5,3 @@
   @source not
 */
 @source not "../**/*.js";
-
-@theme {
-  --anderson-red: #f00;
-}
