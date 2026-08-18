@@ -10,30 +10,30 @@
   <body>
     <div class="p-10 flex flex-col gap-4">
       <!--
-        - O seletor *: aplica estilo em todos os filhos diretos.
-        - O seletor [&_span]: aplica estilo em todos os elementos span dentro do
-        elemento que tem o seletor.
+        Mobile First: desenvolver a aplicação pensando primeiro no layout
+        mobile (como ele deve se comportar em telas pequenas). Após isso,
+        adaptar o layout em telas maiores.
+
+        "Tailwind uses a mobile-first breakpoint system, similar to what you
+        might be used to in other frameworks like Bootstrap."
+
+        Por padrão, aplique "text-center", e para telas acima de 640px,
+        aplique text-left:
+        class="text-center sm:text-left"
       -->
 
+      <div class="bg-red-500 sm:bg-red-300 md:bg-red-500 lg:bg-blue-500 h-10">
+        <span class="hidden sm:max-lg:inline">Texto</span>
+      </div>
+
       <ul
-        class="space-y-2 *:bg-blue-50 *:border *:border-blue-100 [&_span]:text-blue-500"
+        class="space-y-2  *:bg-blue-50 *:border *:border-blue-100 [&_span]:text-blue-500"
       >
         <li>Item 1</li>
         <li>Item 2</li>
         <li><span>Item 3</span></li>
         <li><span>Item 4</span></li>
       </ul>
-
-      <!--
-        Modificadores de estado:
-
-        - hover:
-        - focus:
-        - active:
-        
-        Cara estilização para um estado específico precisa estar em uma classe
-        separada.
-      -->
 
       <input
         type="text"
