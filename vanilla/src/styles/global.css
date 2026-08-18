@@ -1,11 +1,1 @@
 @import "tailwindcss";
-
-/*
-  A diretiva @apply permite aplicar um estilo do TailwindCSS dentro de um
-  seletor do CSS.
-*/
-.card {
-  @apply p-6 mx-6 mt-6 rounded-md border border-zinc-400;
-
-  background: linear-gradient(var(--color-zinc-50), var(--color-zinc-100));
-}

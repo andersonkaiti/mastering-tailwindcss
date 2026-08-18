@@ -8,12 +8,45 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <div class="card">
-      <h1
-        class="text-emerald-500 text-xl bg-[blueviolet] pb-[13.2px] mt-[calc(20px_+_20px)] shadow-[2px_2px_2px_1px_rgba(0,0,0,1)]"
+    <div class="p-10 flex flex-col gap-4">
+      <!--
+        - O seletor *: aplica estilo em todos os filhos diretos.
+        - O seletor [&_span]: aplica estilo em todos os elementos span dentro do
+        elemento que tem o seletor.
+      -->
+
+      <ul
+        class="space-y-2 *:bg-blue-50 *:border *:border-blue-100 [&_span]:text-blue-500"
       >
-        Hello, TailwindCSS!
-      </h1>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li><span>Item 3</span></li>
+        <li><span>Item 4</span></li>
+      </ul>
+
+      <!--
+        Modificadores de estado:
+
+        - hover:
+        - focus:
+        - active:
+        
+        Cara estilização para um estado específico precisa estar em uma classe
+        separada.
+      -->
+
+      <input
+        type="text"
+        class="border border-zinc-300 rounded-md outline-none px-2 h-12 focus:ring-blue-500 focus:ring-2 transition-colors duration-300"
+      >
+
+      <button
+        type="button"
+        class="bg-blue-500 p-2 hover:bg-blue-500/80 text-white rounded-md font-medium h-12 cursor-pointer transition-all duration-300 outline-none focus:border-blue-700 border border-blue-500 active:translate-y-0.5 active:bg-blue-700 disabled:bg-zinc-500 after:bg-red-500 after:size-5 after:absolute after:left-0 before:bg-green-500 before:size-5 before:absolute before:right-0 relative"
+        disabled
+      >
+        Enviar
+      </button>
     </div>
   </body>
 </html>
