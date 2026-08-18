@@ -8,19 +8,12 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <!--
-      É possível criar classes dinâmicas utilizando colchetes.
-
-      Além disso, as classes suportam operadores do CSS como o calc().
-      
-      Importante: o delimitador de classes dentro do HTML, ou seja, o que
-      determina se uma classe terminou e está começando outra, é o espaço. Por
-      isso mt-[calc(20px + 20px) está errado e mt-[calc(20px_+_20px) está correto.
-    -->
-    <h1
-      class="text-emerald-500 text-3xl bg-[blueviolet] pb-[13.2px] mt-[calc(20px_+_20px)] shadow-[2px_2px_2px_1px_rgba(0,0,0,1)]"
-    >
-      Hello, TailwindCSS!
-    </h1>
+    <div class="card">
+      <h1
+        class="text-emerald-500 text-xl bg-[blueviolet] pb-[13.2px] mt-[calc(20px_+_20px)] shadow-[2px_2px_2px_1px_rgba(0,0,0,1)]"
+      >
+        Hello, TailwindCSS!
+      </h1>
+    </div>
   </body>
 </html>

@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 /*
-  É possível excluir arquivos JavaScript do compilador do TailwindCSS com:
-  @source not
+  A diretiva @apply permite aplicar um estilo do TailwindCSS dentro de um
+  seletor do CSS.
 */
-@source not "../**/*.js";
+.card {
+  @apply p-6 mx-6 mt-6 rounded-md border border-zinc-400;
+
+  background: linear-gradient(var(--color-zinc-50), var(--color-zinc-100));
+}
